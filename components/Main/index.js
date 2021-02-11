@@ -1,3 +1,3 @@
 import Board from "./Board";
 
-export default () => `<main>${Board()}</main>`;
+export default ({ board }) => `<main>${Board(board)}</main>`;
