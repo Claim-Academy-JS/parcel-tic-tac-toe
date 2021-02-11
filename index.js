@@ -7,8 +7,16 @@ const state = {
   currentChar: "X",
 };
 
+state.board[2] = "O";
+
 const render = (st = state) => {
   root.innerHTML = Main(st);
+
+  document.querySelectorAll("main div").forEach((div) => {
+    div.addEventListener("click", function handleClick() {
+      console.log(this.dataset.num);
+    });
+  });
 };
 
 render();

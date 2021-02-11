@@ -1,1 +1,2 @@
-export default (board) => `<div>${board}</div>`;
+export default (board) =>
+  board.map((b, i) => `<div data-num=${i}>${b}</div>`).join("\n");
