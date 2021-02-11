@@ -17,16 +17,6 @@ main {
   width: 300px;
 }
 
-div:not(#root) {
-  /* Including styles for 'X' and 'O' to be added via JS. */
-  align-items: center;
-  display: flex;
-  font-size: 5em;
-  height: 100px;
-  justify-content: center;
-  width: 100px;
-}
-
 div:nth-child(1),
 div:nth-child(3),
 div:nth-child(4),
@@ -44,4 +34,14 @@ div:nth-child(8) {
 div:nth-child(2),
 div:nth-child(5) {
   border-bottom: solid 4px black;
+}
+
+div:not(#root) {
+  /* Including styles for 'X' and 'O' to be added via JS. */
+  align-items: center;
+  display: flex;
+  font-size: 5em;
+  height: 100px;
+  justify-content: center;
+  width: 100px;
 }
