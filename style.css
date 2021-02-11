@@ -27,21 +27,21 @@ div {
   width: 100px;
 }
 
-div:nth-child(1),
-div:nth-child(3),
-div:nth-child(4),
-div:nth-child(6) {
+main div:nth-child(1),
+main div:nth-child(3),
+main div:nth-child(4),
+main div:nth-child(6) {
   border-bottom: solid 4px black;
 }
 
-div:nth-child(2),
-div:nth-child(5),
-div:nth-child(8) {
+main div:nth-child(2),
+main div:nth-child(5),
+main div:nth-child(8) {
   border-left: solid 4px black;
   border-right: solid 4px black;
 }
 
-div:nth-child(2),
-div:nth-child(5) {
+main div:nth-child(2),
+main div:nth-child(5) {
   border-bottom: solid 4px black;
 }
