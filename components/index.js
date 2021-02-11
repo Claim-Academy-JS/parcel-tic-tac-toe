@@ -1,2 +1,1 @@
-// Functional Component
-export default () => `<p>I am a component!</p>`;
+export { default as Main } from "./Main";
