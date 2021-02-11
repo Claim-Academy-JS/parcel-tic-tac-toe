@@ -7,14 +7,17 @@ const state = {
   currentChar: "X",
 };
 
-state.board[2] = "O";
-
 const render = (st = state) => {
   root.innerHTML = Main(st);
 
   document.querySelectorAll("main div").forEach((div) => {
     div.addEventListener("click", function handleClick() {
-      console.log(this.dataset.num);
+      const { board: updatedBoard } = st;
+      updatedBoard[this.dataset.num] = st.currentChar;
+
+      state.board = [...updatedBoard];
+      state.currentChar = st.currentChar === "X" ? "O" : "X";
+      render();
     });
   });
 };
