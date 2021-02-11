@@ -4,7 +4,7 @@ const root = document.getElementById("root");
 
 const state = {
   board: Array.from({ length: 9 }, (_, i) => i),
-  names: [],
+  names: ["mark", "jeff"],
   currentPlayer: null,
   winner: null,
 };
@@ -22,7 +22,10 @@ const render = (st = state) => {
   } else {
     document.querySelectorAll("div[data-num]").forEach((square) => {
       square.addEventListener("click", function handleClick() {
-        console.log(this);
+        const { board: updatedBoard } = st;
+        updatedBoard[this.dataset.num] = "X";
+        state.board = [...updatedBoard];
+        render();
       });
     });
   }
