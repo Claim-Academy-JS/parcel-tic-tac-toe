@@ -1,17 +1,16 @@
 {
-  "name": "parcel-starter",
-  "version": "1.0.1",
+  "name": "tic-tac-toe",
+  "version": "0.0.1",
   "private": true,
-  "description": "A starter template repo for 'vanilla SPAs'",
+  "description": "A simple Tic Tac Toe Game",
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html"
   },
   "keywords": [
-    "html-css-js",
-    "student",
     "spa",
-    "parcel"
+    "parcel",
+    "tic-tac-toe"
   ],
   "author": "Manav Misra",
   "license": "MIT",
