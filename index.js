@@ -12,9 +12,13 @@ const render = (st = state) => {
 
   document.querySelectorAll("main div").forEach((div) => {
     div.addEventListener("click", function handleClick() {
+      // Destructure 'board' out of 'st' and rename it as 'updatedBoard'
       const { board: updatedBoard } = st;
+
+      // Use the 'data attribute' of whatever was clicked to find the correct index in the 'board array.'
       updatedBoard[this.dataset.num] = st.currentChar;
 
+      // Avoid mutations
       state.board = [...updatedBoard];
       state.currentChar = st.currentChar === "X" ? "O" : "X";
       render();
