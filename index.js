@@ -5,6 +5,7 @@ const root = document.getElementById("root");
 const state = {
   board: Array.from({ length: 9 }, () => ""),
   currentChar: "X",
+  error: "",
 };
 
 const render = (st = state) => {
@@ -22,6 +23,9 @@ const render = (st = state) => {
         // Avoid mutations
         state.board = [...updatedBoard];
         state.currentChar = st.currentChar === "X" ? "O" : "X";
+        state.error = "";
+      } else {
+        state.error = "Already filled in!";
       }
 
       render();

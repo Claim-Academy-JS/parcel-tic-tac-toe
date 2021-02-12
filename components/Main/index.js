@@ -1,3 +1,11 @@
 import Board from "./Board";
 
-export default ({ board }) => `<main>${Board(board)}</main>`;
+function renderError(msg) {
+  // TODO: Add some classes for CSS...
+  return `<p>${msg}</p>`;
+}
+
+export default ({ board, error }) => `<main>
+${Board(board)}
+  ${error ? renderError(error) : ""}
+  </main>`;
